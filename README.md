@@ -25,7 +25,7 @@ Change the server PORT and IP in server.js
 server.listen(8080, 'localhost');      |
 ------------ |
 
-Execute server
+Execute the server file
 
 node server      |
 ------------ |
