@@ -16,16 +16,16 @@ RocketSeat      | https://www.youtube.com/watch?v=-jXfKDYJJvo
 ## Configuration
 
 Install all project dependencies
-
-npm install      |
------------- |
+```
+npm install
+```
 
 Change the server PORT and IP in server.js
-
-server.listen(8080, 'localhost');      |
------------- |
+```
+server.listen(8080, 'localhost');
+```
 
 Execute the server file
-
-node server      |
------------- |
+```
+node server
+```
