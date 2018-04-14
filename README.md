@@ -3,7 +3,7 @@ A real time chat without database using NodeJS and Socket.io.
 
 Try yourself: http://node-simple-chat.herokuapp.com/
 
-## Team:
+## Developer:
 
 * Antonio Augusto Corrêa Gondim Neto
 
