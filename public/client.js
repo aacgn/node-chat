@@ -1,7 +1,9 @@
 var socket = io();
 
 function renderMessage(message) {
-    $('.messages').append('<div class="message"><strong>'+message.author+': </strong>'+message.message+'</div>')
+    var messages = $('.messages');
+    messages.append('<div class="message"><strong>'+message.author+': </strong>'+message.message+'</div>');
+    messages.scrollTop(messages.prop('scrollHeight'));
 }
 
 socket.on('recivedMessage', function(message) {
