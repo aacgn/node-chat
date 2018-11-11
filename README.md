@@ -51,7 +51,7 @@ npm install
 
 Finally, initialize the server:
 ```
-node index
+npm start
 ```
 
 (Optional) If, you wanna change your PORT open server.js and change the value of port variable (line 4):
