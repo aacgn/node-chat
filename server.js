@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 
 const PORT = process.env.PORT || 8080;
-const IP = process.env.IP || 'localhost';
 
 const app = express();
 const server = require('http').createServer(app);
@@ -51,6 +50,6 @@ function configureSendMessageListener() {
 }
 
 function startHttpServer() {
-    server.listen(PORT, IP);
-    console.log('Server started on http://' + IP + ':' + PORT);
+    server.listen(PORT);
+    console.log('Server started on port ' + PORT);
 }
