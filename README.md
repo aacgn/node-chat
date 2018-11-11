@@ -1,6 +1,6 @@
 # Node simple chat
 
-A real time chat without database using NodeJs and Socket.io.
+A real time chat without database using Socket.io.
 
 Try yourself: http://node-simple-chat.herokuapp.com/
 
