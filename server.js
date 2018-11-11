@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const {transports, createLogger, format } = require('winston');
 
 const PORT = process.env.PORT || 8080;
 
@@ -50,6 +51,20 @@ function configureSendMessageListener() {
 }
 
 function startHttpServer() {
-    server.listen(PORT);
-    console.log('Server started on port ' + PORT);
+    server.listen(PORT, () => {
+        let logger = createLogger({
+            format: format.combine(
+                format.cli(),
+                format.timestamp(),
+                format.colorize(),
+                format.printf((info) => {
+                    return `[${new Date(info.timestamp).toUTCString()} | ${info.level}] ${info.message}`;
+                })
+            ),
+            transports: [
+                new transports.Console(),
+            ],
+        })
+        logger.warn('[Started] Server was initialized on port ' + PORT);
+    });
 }
